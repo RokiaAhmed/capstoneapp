@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".weather.WeatherFragment">
+
+    <ImageView
+        android:id="@+id/iv_weather_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/sun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_weather_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25"
+        android:textColor="@android:color/white"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_weather_icon" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tv_weather_temp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_weather_icon"
+        app:srcCompat="@drawable/ic_celcious" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:text="C"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@id/tv_weather_temp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_weather_icon" />
+
+    <TextView
+        android:id="@+id/tv_city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Cairo, Eg"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_weather_temp" />
+
+    <TextView
+        android:id="@+id/tv_weather_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Sunny"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_city_name" />
+
+    <View
+        android:id="@+id/weather_bg"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/weather_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_weather_description" />
+
+    <TextView
+        android:id="@+id/tv_after_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/after_3_hours"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="@id/weather_bg"
+        app:layout_constraintTop_toTopOf="@+id/weather_bg" />
+
+    <TextView
+        android:id="@+id/tv_after_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/after_6_hours"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@id/tv_after_9"
+        app:layout_constraintStart_toEndOf="@id/tv_after_3"
+        app:layout_constraintTop_toTopOf="@id/weather_bg" />
+
+    <TextView
+        android:id="@+id/tv_after_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/after_9_hours"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@id/weather_bg"
+        app:layout_constraintTop_toTopOf="@+id/weather_bg" />
+
+
+    <TextView
+        android:id="@+id/tv_min_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="22"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@id/tv_3_hour_divider"
+        app:layout_constraintStart_toStartOf="@id/tv_after_3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_after_3" />
+
+    <TextView
+        android:id="@+id/tv_3_hour_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="/"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@id/tv_after_3"
+        app:layout_constraintStart_toStartOf="@id/tv_after_3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_after_3" />
+
+    <TextView
+        android:id="@+id/tv_max_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="22"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@id/tv_after_3"
+        app:layout_constraintStart_toEndOf="@id/tv_3_hour_divider"
+        app:layout_constraintTop_toBottomOf="@+id/tv_after_3" />
+
+    <TextView
+        android:id="@+id/tv_min_temp_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="22"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@id/tv_6_hour_divider"
+        app:layout_constraintStart_toStartOf="@id/tv_after_6"
+        app:layout_constraintTop_toBottomOf="@+id/tv_after_6" />
+
+    <TextView
+        android:id="@+id/tv_6_hour_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="/"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@id/tv_after_6"
+        app:layout_constraintStart_toStartOf="@id/tv_after_6"
+        app:layout_constraintTop_toBottomOf="@+id/tv_after_6" />
+
+    <TextView
+        android:id="@+id/tv_max_temp_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="22"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@id/tv_after_6"
+        app:layout_constraintStart_toEndOf="@id/tv_6_hour_divider"
+        app:layout_constraintTop_toBottomOf="@+id/tv_after_6" />
+
+    <TextView
+        android:id="@+id/tv_min_temp_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="22"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@id/tv_9_hour_divider"
+        app:layout_constraintStart_toStartOf="@id/tv_after_9"
+        app:layout_constraintTop_toBottomOf="@+id/tv_after_9" />
+
+    <TextView
+        android:id="@+id/tv_9_hour_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="/"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@id/tv_after_9"
+        app:layout_constraintStart_toStartOf="@id/tv_after_9"
+        app:layout_constraintTop_toBottomOf="@+id/tv_after_9" />
+
+    <TextView
+        android:id="@+id/tv_max_temp_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="22"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@id/tv_after_9"
+        app:layout_constraintStart_toEndOf="@id/tv_9_hour_divider"
+        app:layout_constraintTop_toBottomOf="@+id/tv_after_9" />
+
+    <FrameLayout
+        android:id="@+id/progress_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:progressBackgroundTint="@android:color/white" />
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,39 @@
+<resources>
+    <string name="weather_key">5d42850ede15c3074032dec64beebafb</string>
+    <string name="places_key">AIzaSyBRSbKDM-kup5eXhaJjuenUbw0IyoABnSQ</string>
+
+
+    <string name="app_name">Travel</string>
+    <string name="enter_city_name">Enter City Name</string>
+    <string name="enter_country_name">Enter Country Name</string>
+    <string name="go">Lets Go!</string>
+    <string name="error_enter_country">Please enter country name</string>
+    <string name="error_enter_city">Please enter city name</string>
+    <string name="error_enter_city_and_country">Please enter country and city</string>
+    <string name="network_fail">Please check your connection</string>
+    <string name="weather">Weather</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="museum">Museum</string>
+    <string name="favourite">Favourite</string>
+
+    <string name="after_3_hours">After 3 hours</string>
+    <string name="after_6_hours">After 6 hours</string>
+    <string name="after_9_hours">After 9 hours</string>
+
+
+    <string name="save">save</string>
+    <string name="un_save">unSave</string>
+
+    <string name="name">Name :</string>
+    <string name="address">Address :</string>
+
+    <string name="error_404">sorry data not found</string>
+    <string name="error_401">sorry you\'re unauthorized user</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+
+
+</resources>
